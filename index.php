@@ -10,9 +10,14 @@
 	<div class="mainbox">
 		<div class="box">
 			<div class="box1">
-				<span class="span1"></span>
-				<span class="span2"></span>
-				<span class="span3"></span>
+				<span class="span1"><b>50</b></span>
+				<span class="span2"><b>450</b></span>
+				<span class="span3"><b>15</b></span>
+			</div> 
+			<div class="box2">
+				<span class="span1"><b>50</b></span>
+				<span class="span2"><b>450</b></span>
+				<span class="span3"><b>15</b></span>
 			</div>
 		</div>
 	</div>

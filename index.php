@@ -15,27 +15,30 @@
 		</div>
 		<div id="box" class="box">
 			<div class="box1">
-				<span class="obstaculo span1"><b><i class="fa-solid fa-arrow-left-long"></i></b></span>
-				<span class="obstaculo span2"><b>$2</b></span>
-				<span class="obstaculo span3"><b>$3</b></span>
+				<span class="obstaculo span1"><b>1</b></span>
+				<span class="obstaculo span2"><b>2</b></span>
+				<span class="obstaculo span3"><b>3</b></span>
 			</div> 
 			<div class="box2">
-				<span class="obstaculo span4">
-					<b>2
-						<img src="https://http2.mlstatic.com/D_NQ_NP_822023-MCO42254061606_062020-O.jpg" height="60">
-					</b>
-				</span>
-				<span class="obstaculo span5"><b>$5</b></span>
-				<span class="obstaculo span6"><b>$6</b></span>
+				<span class="obstaculo span4"><b>2</b></span>
+				<span class="obstaculo span5"><b>5</b></span>
+				<span class="obstaculo span6"><b>6</b></span>
 			</div>
 		</div> 
-		<div id="flecha" class="flecha"><i class="fa-solid fa-square-caret-left"></i></div>
+		<div id="flecha" class="flecha">
+			<img src="img/flecha2.png" height="50">
+		</div>
 
 		<!-- <button id="ejemplo" style="position: absolute; margin-left: 5px;">1</button>
 		<button class="obstaculo">2</button> -->
 
-		<button class="spin" onclick="myFunction(this)">Girar</button>
+		<button class="spin" onclick="myFunction(this)"><img src="https://www.claro.com.co/portal/recursos_estaticos_claro/claro/css/vector/logo-claro-blanco.svg"></button>
 	</div>
+	<!--  -->
+	<div class="logo-tenderos">
+		<img src="img/CV_Claro_tendero_LOGO.png" height="500">
+	</div>
+	<!--  -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquerycollision/jquery-collision.min.js"></script>
 	<script type="text/javascript">
@@ -44,7 +47,7 @@
 
 
 		function myFunction(btn){
-			btn.disabled = true;
+			// btn.disabled = true;
 			let x = 1024; //min value
 			let y = 9999; //max value 
 

@@ -15,6 +15,9 @@ body {
 	overflow: hidden;
 	background-color: #FF120D;
 	background-size: cover; 
+  background-image: url("../img/CV_Claro_tendero_fondo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .mainbox {
@@ -24,13 +27,23 @@ body {
 }
 
 .box {
+  background-color: black;
 	width: 100%;
 	height: 100%;
 	position: relative;
 	border-radius: 50%;
-	border: 10px solid #000000;
 	overflow: hidden;
 	transition: all ease 5s;
+  box-shadow: 0 5px 20px #000;
+	border: 10px solid silver;
+
+  animation-name: border;
+  animation-duration: 1s;
+}
+
+@keyframes border {
+  from {transform: border-color: #FFFF00;}
+  to {transform: border-color: black;}
 }
 
 .box2 {
@@ -68,7 +81,7 @@ span {
     top: 0;
 }
 .span4 {
-    clip-path: polygon(100% 101%, 50% 10%, -51% 100%);
+    clip-path: polygon(100% 100%, 50% 10%, -51% 100%);
     background-color: #FF120D;
     left: 0;
     top: 0;
@@ -82,7 +95,7 @@ span {
 }
 
 .span6 {
-    clip-path: polygon(50% -1%, -13% 108%, 107% 100%);
+    clip-path: polygon(50% -1%, -13% 108%, 108% 100%);
     background-color: #FF120D;
     left: 25%;
     bottom: 0%;
@@ -95,12 +108,12 @@ span b {
 	border-radius: 50px;
 	font-size: 26px;
 	text-align: center;
-	/*background-color: #fff;*/
+	background-color: #fff;
 	position: absolute;
 	top: 71%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	box-shadow: inset 0 3px 3px 0 #717171;
+	box-shadow: inset 0 3px 3px 0 #717171; 
 }
 
 .spin {
@@ -108,17 +121,17 @@ span b {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 75px;
-	height: 75px;
+	width: 90px;
+	height: 90px;
 	border-radius: 50%;
 	border: 4px solid #fff;
-	background-color: #ff5722;
+	background-color: #FF120D;
 	color:#fff;
 	box-shadow: 0 5px 20px #000;
 	font-weight: bold;
 	font-size: 22px;
 	cursor: pointer;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Claro.svg/1741px-Claro.svg.png");
+  padding: 5px;
 }
 
 .spin:active {
@@ -136,7 +149,7 @@ span b {
   color: #A1AFB5;
 	background-size: 32px;
 	right: -8px;
-	top: 46%;
+	top: 41%;
 	transform: translate(-50%);
 }
 
@@ -148,6 +161,18 @@ span b {
 	50% {
 		right: -40px;
 	}
+}
+
+.logo-tenderos {
+  position: absolute;
+  right: 5%;
+  top: 28%;
+}
+
+@media(max-width: 1600px){
+  .logo-tenderos {
+      display: none;
+  }
 }
 
 /* **************************** FIREWORKS *********************************** */

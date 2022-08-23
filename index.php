@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 <body>
+	<script src="https://kit.fontawesome.com/15bc5276a1.js" crossorigin="anonymous"></script>
 	<div id="mainbox" class="mainbox">
 		<div id="pyro" class="pyro">
 	  		<div class="before"></div>
@@ -14,17 +15,21 @@
 		</div>
 		<div id="box" class="box">
 			<div class="box1">
-				<span class="obstaculo span1"><b>$1</b></span>
+				<span class="obstaculo span1"><b><i class="fa-solid fa-arrow-left-long"></i></b></span>
 				<span class="obstaculo span2"><b>$2</b></span>
 				<span class="obstaculo span3"><b>$3</b></span>
 			</div> 
 			<div class="box2">
-				<span class="obstaculo span1"><b>$4</b></span>
-				<span class="obstaculo span2"><b>$5</b></span>
-				<span class="obstaculo span3"><b>$6</b></span>
+				<span class="obstaculo span4">
+					<b>2
+						<img src="https://http2.mlstatic.com/D_NQ_NP_822023-MCO42254061606_062020-O.jpg" height="60">
+					</b>
+				</span>
+				<span class="obstaculo span5"><b>$5</b></span>
+				<span class="obstaculo span6"><b>$6</b></span>
 			</div>
 		</div> 
-		<div id="flecha" class="flecha"></div>
+		<div id="flecha" class="flecha"><i class="fa-solid fa-square-caret-left"></i></div>
 
 		<!-- <button id="ejemplo" style="position: absolute; margin-left: 5px;">1</button>
 		<button class="obstaculo">2</button> -->
@@ -59,10 +64,10 @@
 			let colision = $("#flecha").collision(".obstaculo");
 			console.log(colision[0])
 			if (colision[0]){
-				console.log(colision[0].innerHTML);
+				// console.log(colision[0].innerHTML);
 			}else {
-				console.log('No.');
-			}
+				// console.log('No.');
+			} 
 		}
 
 		function fireWorks(){

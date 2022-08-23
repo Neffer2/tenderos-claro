@@ -13,14 +13,14 @@ body {
 	align-items: center;
 	height: 100vh;
 	overflow: hidden;
-	background-color: #f44336;
+	background-color: #FF120D;
 	background-size: cover; 
 }
 
 .mainbox {
 	position: relative;
-	width: 350px;
-	height: 350px;
+	width: 450px;
+	height: 450px;
 }
 
 .box {
@@ -28,7 +28,7 @@ body {
 	height: 100%;
 	position: relative;
 	border-radius: 50%;
-	border: 10px solid #fff;
+	border: 10px solid #000000;
 	overflow: hidden;
 	transition: all ease 5s;
 }
@@ -36,7 +36,7 @@ body {
 .box2 {
 	width: 100%;
 	height: 100%;
-	transform: rotate(-180deg);
+	transform: rotate(300deg);
 }
 
 span {
@@ -48,21 +48,42 @@ span {
 
 .span1 {
     clip-path: polygon(100% 101%, 50% 10%, -51% 100%);
-    background-color: #4caf50;
+    background-color: #fff;
     left: 0;
     top: 0;
 }
 
+
+.span2 {
+    clip-path: polygon(50% -1%, -13% 108%, 107% 100%);
+    background-color: #fff;
+    left: 25%;
+    bottom: 0%;
+}
+
 .span3 {
     clip-path: polygon(67% -18%, -1% 100%, 159% 115%);
-    background-color: #ffeb3b;
+    background-color: #fff;
+    left: 50%;
+    top: 0;
+}
+.span4 {
+    clip-path: polygon(100% 101%, 50% 10%, -51% 100%);
+    background-color: #FF120D;
+    left: 0;
+    top: 0;
+}
+
+.span5 {
+    clip-path: polygon(67% -18%, -1% 100%, 159% 115%);
+    background-color: #FF120D;
     left: 50%;
     top: 0;
 }
 
-.span2 {
+.span6 {
     clip-path: polygon(50% -1%, -13% 108%, 107% 100%);
-    background-color: #e91e63;
+    background-color: #FF120D;
     left: 25%;
     bottom: 0%;
 }
@@ -74,7 +95,7 @@ span b {
 	border-radius: 50px;
 	font-size: 26px;
 	text-align: center;
-	background-color: #fff;
+	/*background-color: #fff;*/
 	position: absolute;
 	top: 71%;
 	left: 50%;
@@ -97,6 +118,7 @@ span b {
 	font-weight: bold;
 	font-size: 22px;
 	cursor: pointer;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Claro.svg/1741px-Claro.svg.png");
 }
 
 .spin:active {
@@ -109,9 +131,11 @@ span b {
 	position: absolute;
 	width: 32px;
 	height: 32px;
-	background: url('http://cdn.onlinewebfonts.com/svg/img_264251.png') no-repeat;
+	/*background: url('http://cdn.onlinewebfonts.com/svg/img_264251.png') no-repeat;*/
+  font-size: 32px;  
+  color: #A1AFB5;
 	background-size: 32px;
-	right: -16px;
+	right: -8px;
 	top: 46%;
 	transform: translate(-50%);
 }

@@ -5,27 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="styles/ruleta.css">
-	<style type="text/css">
-		.responsive {
-		  width: 100%;
-		  height: auto;
-		}
-
-		img { 
-			transition: all ease 5s;
-		}
- 
-	</style>
 </head> 
 <body>
-	<!-- <div class="container">
-		<img id="box" class="responsive" src="ruleta.png" alt="" usemap="#map" height="700" />
-		<map name="map">
-		    <area shape="poly" onclick="console.log('Arriba')" href="#" coords="3470, 1887, 494, 1867, 602, 271, 3474, 471" />
-		    <area shape="poly" onclick="console.log('Abajo')" coords="494, 1867, 3469, 1887, 3418, 3463, 494, 3527" />
-		</map>
-	</div> --> 
-
+	<div id="pyro" class="pyro" style="position: absolute;">
+  		<div class="before"></div>
+  		<div class="after"></div>
+	</div> 
 	<div class="ruleta-container">
 		<div class="item ruleta">
 			<img id="img" src="ruleta2.png"/>
@@ -34,7 +19,9 @@
 			<img id="img" src="img/CV_Claro_tendero_LOGO.png"/>
 		</div>
 		<div class="item palanca">
-			<button onClick="myFunction()">Rotate Image</button>
+			<div class="rotate-border">
+				<button class="spin-btn" onClick="myFunction()"></button>
+			</div>
 		</div>
 	</div>
 
@@ -42,12 +29,18 @@
 	<script type="text/javascript" src="js/jquerycollision/jquery-collision.min.js"></script>
 	<script type="text/javascript" src="js/image-map-resizer/js/imageMapResizer.min.js"></script>
 	<script type="text/javascript">
+		fireworks = document.getElementById('pyro');
+
 		function myFunction(){
 			let x = 1024; //min value
 			let y = 9999; //max value
 
 			let deg = Math.floor(Math.random() * (x - y)) + y;
 			document.getElementById('img').style.transform = `rotate(${deg}deg)`;
+
+			setTimeout(function(){
+				fireworks.style.display = "block"
+			}, 3000);
 		}
 
 		$('map').imageMapResize();

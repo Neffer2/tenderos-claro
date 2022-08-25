@@ -1,6 +1,64 @@
-.container {
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+ 
+body {
+	background-image: url(../img/CV_Claro_tendero_fondo.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/*.container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	transition: all ease 5s;
+}*/
+
+.ruleta-container {
+/*	background-color: blueviolet;*/
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 30% 30% 30%;
+	grid-auto-rows: 40vh;
+	justify-content: center;
+	align-content: center;
+	gap: 5px;
+}
+
+.item {
+	/*background-color: greenyellow;*/
+	text-align: center;
+}
+
+.ruleta {
+	grid-column-start: 1;
+	grid-column-end: 3;
+
+	grid-row-start: 1;
+	grid-row-end: 3;
+}
+
+.ruleta img {
+	height: 99%;
+}
+
+.logo {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.logo img {
+	height: 100%;
+}
+
+.palanca {
+	display: flex;
+	align-items: center;
+}
+
+.palanca button {
+	padding: 0 30px;
 }

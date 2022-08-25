@@ -11,37 +11,46 @@
 		  height: auto;
 		}
 
-		img {
+		img { 
 			transition: all ease 5s;
 		}
-
+ 
 	</style>
 </head> 
 <body>
-	<div class="container">
+	<!-- <div class="container">
 		<img id="box" class="responsive" src="ruleta.png" alt="" usemap="#map" height="700" />
 		<map name="map">
 		    <area shape="poly" onclick="console.log('Arriba')" href="#" coords="3470, 1887, 494, 1867, 602, 271, 3474, 471" />
 		    <area shape="poly" onclick="console.log('Abajo')" coords="494, 1867, 3469, 1887, 3418, 3463, 494, 3527" />
 		</map>
+	</div> --> 
+
+	<div class="ruleta-container">
+		<div class="item ruleta">
+			<img id="img" src="ruleta2.png"/>
+		</div>
+		<div class="item logo">
+			<img id="img" src="img/CV_Claro_tendero_LOGO.png"/>
+		</div>
+		<div class="item palanca">
+			<button onClick="myFunction()">Rotate Image</button>
+		</div>
 	</div>
 
-	<img id="img" src="ruleta2.png" height="500" />
-	<button onClick="myFunction()">Rotate Image</button>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquerycollision/jquery-collision.min.js"></script>
+	<script type="text/javascript" src="js/image-map-resizer/js/imageMapResizer.min.js"></script>
+	<script type="text/javascript">
+		function myFunction(){
+			let x = 1024; //min value
+			let y = 9999; //max value
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquerycollision/jquery-collision.min.js"></script>
-<script type="text/javascript" src="js/image-map-resizer/js/imageMapResizer.min.js"></script>
-<script type="text/javascript">
-	function myFunction(){
-		let x = 1024; //min value
-		let y = 9999; //max value
+			let deg = Math.floor(Math.random() * (x - y)) + y;
+			document.getElementById('img').style.transform = `rotate(${deg}deg)`;
+		}
 
-		let deg = Math.floor(Math.random() * (x - y)) + y;
-		document.getElementById('img').style.transform = `rotate(${deg}deg)`;
-	}
-
-	$('map').imageMapResize();
-</script>
+		$('map').imageMapResize();
+	</script>
 </body>
 </html>

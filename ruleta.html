@@ -13,26 +13,38 @@
 	</div> 
 	<div class="ruleta-container">
 		<div class="item ruleta">
-			<img class="ruleta-img" id="img" src="ruleta2.png"/>
+			<img id="img" src="ruleta2.png" alt="" usemap="#map" height="100"/>
+				<map name="map">
+					<area id="verde" shape="poly" class="zone" onclick="console_color('verde')" coords="247, 258, 1, 867, 128, 865, 344, 342" />
+					<area shape="poly" class="zone" onclick="console_color('azul oscuro')" coords="128, 866, 342, 1386, 243, 1467, 2, 868" />
+					<area shape="poly" class="zone" onclick="console_color('azul claro')" coords="864, 1602, 343, 1386, 244, 1467, 864, 1729" />
+					<area shape="poly" class="zone" onclick="console_color('verde-azul')" coords="865, 1603, 865, 1728, 1481, 1473, 1387, 1385" />
+					<area shape="poly" class="zone" onclick="console_color('blanco')" coords="1604, 866, 1388, 1386, 1482, 1473, 1728, 864" />
+					<area id="naranja" shape="poly" class="zone" onclick="console_color('nranaja')" coords="1387, 343, 1603, 864, 1729, 865, 1477, 252" />
+					<area shape="poly" class="zone" onclick="console_color('rojo')" coords="864, 128, 1388, 343, 1477, 253, 865, 3" />
+					<area shape="poly" class="zone" onclick="console_color('morado')" coords="344, 343, 248, 259, 865, 3, 865, 128" />
+				</map>
 			<i id="flecha-mobile" class="fa-solid fa-caret-left"></i>
-			<img id="flecha" src="img/left-arrow.png" alt="flecha-izquierda">
+			<img id="flecha" onclick="console.log('no me toques D:')" src="img/left-arrow.png" alt="flecha-izquierda">
 		</div>
 		<div class="item logo">
-			<img id="img" src="img/CV_Claro_tendero_LOGO.png"/>
+			<img src="img/CV_Claro_tendero_LOGO.png"/>
 		</div>
 		<div class="item palanca">
 			<div class="rotate-border">
 				<button class="spin-btn" onClick="myFunction()"></button>
 			</div>
 		</div>
-	</div>
+	</div> 
 
 	<script src="https://kit.fontawesome.com/15bc5276a1.js" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquerycollision/jquery-collision.min.js"></script>
-	<script type="text/javascript" src="js/image-map-resizer/js/imageMapResizer.min.js"></script>
+    <script type="text/javascript" src="js/image-map-resizer/imageMapResizer.min.js"></script>
 	<script type="text/javascript">
 		fireworks = document.getElementById('pyro');
+		let flecha = document.getElementById('flecha');
+		let verde = document.getElementById('verde');
+		let naranja = document.getElementById('naranja');
 
 		function myFunction(){
 			let x = 1024; //min value
@@ -43,10 +55,21 @@
 
 			setTimeout(function(){
 				fireworks.style.display = "block"
-			}, 3000);
+				check_seleccion();
+			}, 3000); 
 		}
 
-		$('map').imageMapResize();
-	</script>
+		function check_seleccion() {
+			let coords = flecha.getBoundingClientRect();
+			document.elementFromPoint((coords.x)-15, (coords.y+60)).click();
+			console.log((coords.x)-15, (coords.y+60));
+		}
+
+		function console_color (color){
+            alert(color);
+        }
+
+		imageMapResize();
+	</script> 
 </body>
 </html>

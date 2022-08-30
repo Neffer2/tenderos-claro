@@ -43,6 +43,7 @@
 	<script type="text/javascript">
 		fireworks = document.getElementById('pyro');
 		let flecha = document.getElementById('flecha');
+		let flecha_mobile = document.getElementById('flecha-mobile');
 		let verde = document.getElementById('verde');
 		let naranja = document.getElementById('naranja');
 
@@ -60,9 +61,16 @@
 		}
 
 		function check_seleccion() {
-			let coords = flecha.getBoundingClientRect();
-			document.elementFromPoint((coords.x)-15, (coords.y+60)).click();
-			console.log((coords.x)-15, (coords.y+60));
+			let coords = 0;
+			if (screen.width <= 425){
+				coords = flecha_mobile.getBoundingClientRect();
+				document.elementFromPoint((coords.x-21), (coords.y+14)).click();
+				console.log((coords.x-21), (coords.y+14));
+			}else{
+				coords = flecha.getBoundingClientRect();
+				document.elementFromPoint((coords.x)-15, (coords.y+60)).click();
+				console.log((coords.x)-15, (coords.y+60));
+			}
 		}
 
 		function console_color (color){

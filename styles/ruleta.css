@@ -122,7 +122,7 @@ img {
 }
 
 @media (max-width: 425px) {
-  
+   
   .ruleta-container {
     grid-auto-rows: 30vh;
   }
